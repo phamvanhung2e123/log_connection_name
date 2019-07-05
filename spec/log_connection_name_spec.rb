@@ -6,4 +6,8 @@ RSpec.describe LogConnectionName do
   it "does something useful" do
     expect(false).to eq(true)
   end
+
+  it "Book exist" do
+    expect(Book.count).to eq 0
+  end
 end
