@@ -47,5 +47,5 @@ module LogConnectionName
 end
 
 ActiveSupport.on_load(:active_record) do
-  ActiveRecord::ConnectionAdapters::AbstractAdapter.prepend(LogConnectionName::AbstractAdapter::ConnectionName)
+  ActiveRecord::ConnectionAdapters::AbstractAdapter.include(LogConnectionName::AbstractAdapter::ConnectionName)
 end

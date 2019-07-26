@@ -15,6 +15,7 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     Book.connection.execute('CREATE TABLE books (id integer primary key autoincrement)')
+    Book.connection.connection_name = "book"
   end
 
   config.after(:suite) do
