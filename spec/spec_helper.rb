@@ -17,9 +17,9 @@ RSpec.configure do |config|
     Book.connection.execute('CREATE TABLE books (id integer primary key autoincrement)')
   end
 
-  config.before(:suite) do
+  config.after(:suite) do
     ActiveRecord::Base.configurations.each_value do |c|
-      FileUtils.rm_f(c[:database])
+      FileUtils.rm_f(c["database"])
     end
   end
 end
