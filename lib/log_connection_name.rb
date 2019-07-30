@@ -3,7 +3,6 @@ require "active_support"
 require "log_connection_name/version"
 
 module LogConnectionName
-  class Error < StandardError; end
   module AbstractAdapter
     module ConnectionName
       def self.included(model)
