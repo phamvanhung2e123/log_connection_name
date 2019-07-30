@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Log connection name for ActiveRecord"
   spec.description   = "Log connection name for ActiveRecord"
-  spec.homepage      = "https://github.com/phamvanhungmixi/log_connection_name"
+  spec.homepage      = "https://github.com/phamvanhung2e123/log_connection_name"
   spec.license       = "MIT"
   
   # Specify which files should be added to the gem when it is released.
@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_dependency 'activerecord', '>= 3.2.0'
